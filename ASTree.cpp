@@ -297,6 +297,7 @@ PycRef<ASTNode> BuildFromCode(PycRef<PycCode> code, PycModule* mod)
                 stack.push(new ASTConstMap(keys, values));
             }
             break;
+        case Pyc::MAP_ADD_A:
         case Pyc::STORE_MAP:
             {
                 PycRef<ASTNode> key = stack.top();
